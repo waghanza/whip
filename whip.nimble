@@ -9,7 +9,8 @@ skipDirs = @["tests", "empower"]
 # Dependencies
 
 #requires "packedjson", "nim >= 1.0.19.0", "nest", "httpbeast >= 0.2"
-requires "packedjson", "nim", "nest", "httpbeast"
+requires "packedjson", "nim", "nest"
+requires "httpbeast >= 0.2 & < 0.3"
 
 task test, "run tests": exec "nim c -r --threads=on ./whip.nim"
 task bench, "run bench": exec "./bench.sh -c"
